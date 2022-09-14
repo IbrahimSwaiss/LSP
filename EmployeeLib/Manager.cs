@@ -2,8 +2,15 @@
 
 namespace EmployeeLib
 {
-    public class Manager : Employee
+    public class Manager : BaseEmployee, IAssignManager, IPerformance
     {
+        public BaseEmployee AssignedManager { get; set; }
+
+        public void AssignManager(BaseEmployee manager)
+        {
+            AssignedManager = manager;
+        }
+
         public override void CalculatePerHourRate(int rank)
         {
             decimal baseAmount = 19.75M;
