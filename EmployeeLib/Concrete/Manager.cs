@@ -1,8 +1,9 @@
-﻿using System;
+﻿using EmployeeLib.Abstract;
+using System;
 
-namespace EmployeeLib
+namespace EmployeeLib.Concrete
 {
-    public class Manager : Employee
+    public class Manager : BaseEmployee, IHasPerformance
     {
         public override void CalculatePerHourRate(int rank)
         {

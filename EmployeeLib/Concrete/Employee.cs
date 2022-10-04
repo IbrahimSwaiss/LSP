@@ -1,13 +1,15 @@
-﻿namespace EmployeeLib
+﻿using EmployeeLib.Abstract;
+
+namespace EmployeeLib.Concrete
 {
-    public class Employee
+   public class Employee : BaseEmployee, IHasManager<Manager>
     {
         public string FirstName { get; set; }
         public string LastName { get; set; }
-        public Employee Manager { get; set; } = null;
         public decimal Salary { get; set; }
+        public Manager Manager { get; set; }
 
-        public virtual void AssignManager(Employee manager)
+        public void AssignManager(Manager manager)
         {
             // Simulate doing other tasks here - otherwise, this should be
             // a property set statement, not a method.
