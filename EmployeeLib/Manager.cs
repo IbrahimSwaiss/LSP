@@ -2,7 +2,7 @@
 
 namespace EmployeeLib
 {
-    public class Manager : Employee
+    public class Manager : BaseEmployee, IPerformance
     {
         public override void CalculatePerHourRate(int rank)
         {
