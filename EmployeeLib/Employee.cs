@@ -1,10 +1,10 @@
 ﻿namespace EmployeeLib
 {
-    public class Employee : BaseEmployee, IAssignManager
+    public class Employee : BaseEmployee, IAssignManager<Manager>
     {
-        public BaseEmployee AssignedManager { get; set; }
+        public Manager AssignedManager { get; set; }
 
-        public void AssignManager(BaseEmployee manager)
+        public void AssignManager(Manager manager)
         {
             AssignedManager = manager;
         }

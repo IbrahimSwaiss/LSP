@@ -1,5 +1,5 @@
-public interface IAssignManager
+public interface IAssignManager<T>
 {
-    BaseEmployee AssignedManager{get;set;}
-    void AssignManager(BaseEmployee manager);
+    T AssignedManager{get;set;}
+    void AssignManager(T manager);
 }
