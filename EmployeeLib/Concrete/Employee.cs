@@ -2,7 +2,7 @@
 
 namespace EmployeeLib.Concrete
 {
-   public class Employee : BaseEmployee, IHasManager<Manager>
+   public class Employee : BaseEmployee, IHasManager
     {
         public string FirstName { get; set; }
         public string LastName { get; set; }

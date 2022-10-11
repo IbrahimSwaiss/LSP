@@ -1,8 +1,10 @@
-﻿namespace EmployeeLib.Abstract
+﻿using EmployeeLib.Concrete;
+
+namespace EmployeeLib.Abstract
 {
-    public interface IHasManager<T> where T : IBaseEmployee
+    public interface IHasManager 
     {
-        public T Manager { get; set; }
-        public void AssignManager(T manager);
+        public Manager Manager { get; set; }
+        public void AssignManager(Manager manager);
     }
 }
